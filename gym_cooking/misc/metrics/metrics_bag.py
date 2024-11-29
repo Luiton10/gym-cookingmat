@@ -5,7 +5,7 @@ class Bag:
     def __init__(self, arglist, filename):
         self.data = {}
         self.arglist = arglist
-        self.directory = "misc/metrics/pickles/"
+        self.directory = "misc/metrics/"
         self.filename = filename
         self.set_general()
 
@@ -63,7 +63,9 @@ class Bag:
         self.data["was_successful"] = successful
         for k, v in self.data.items():
             print("{}: {}\n".format(k, v))
-        self.data["num_completed_subtasks_end"] = 0 if len(self.data["num_completed_subtasks"]) == 0 else self.data["num_completed_subtasks"][-1]
+        self.data["num_completed_subtasks_end"] = 0 if len(self.data["num_completed_subtasks"]) == 0 else \
+        self.data["num_completed_subtasks"][-1]
         print('completed {} / {} subtasks'.format(self.data["num_completed_subtasks_end"], self.data["num_total_subtasks"]))
-        pickle.dump(self.data, open(self.directory+self.filename+'.pkl', "wb"))
-        print("Saved to {}".format(self.directory+self.filename+'.pkl'))
+        pickle.dump(self.data, open(self.directory + self.filename + '.pkl', "wb"))
+        print("Saved to {}".format(self.directory + self.filename + '.pkl'))
+

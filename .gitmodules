@@ -1,0 +1,3 @@
+[submodule "Multi-Agent-Transformer"]
+	path = Multi-Agent-Transformer
+	url = https://github.com/Luiton10/gym-cookingmat

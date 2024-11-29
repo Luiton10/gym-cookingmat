@@ -8,7 +8,8 @@ from functools import lru_cache
 
 import recipe_planner.utils as recipe
 from navigation_planner.utils import manhattan_dist
-from utils.core import Object, GridSquare, Counter
+from gym_cooking.utils.core import Object, GridSquare, Counter
+
 
 
 class World:

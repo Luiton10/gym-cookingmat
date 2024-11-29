@@ -1,4 +1,4 @@
-from utils.core import *
+from gym_cooking.utils.core import *
 import recipe_planner.utils as recipe
 
 

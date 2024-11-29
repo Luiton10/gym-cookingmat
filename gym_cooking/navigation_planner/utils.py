@@ -1,4 +1,5 @@
-from utils.core import *
+from gym_cooking.utils.core import *
+
 import recipe_planner.utils as recipe
 import recipe_planner.recipe
 import numpy as np

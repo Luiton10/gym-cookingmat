@@ -1,7 +1,14 @@
 # Recipe planning
+from gym_cooking.utils.core import *
+
 from recipe_planner.stripsworld import STRIPSWorld
 import recipe_planner.utils as recipe
 from recipe_planner.recipe import *
+import sys
+import os
+
+# Add the parent directory of `utils` to the Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
 # Delegation planning
 from delegation_planner.bayesian_delegator import BayesianDelegator
@@ -10,8 +17,9 @@ from delegation_planner.bayesian_delegator import BayesianDelegator
 import navigation_planner.utils as nav_utils
 
 # Other core modules
-from utils.interact import interact
-from utils.world import World
+from gym_cooking.utils.interact import interact
+from gym_cooking.utils.world import World
+
 from utils.core import *
 from utils.agent import SimAgent
 from misc.game.gameimage import GameImage
